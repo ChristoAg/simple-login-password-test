@@ -7,7 +7,7 @@ const expresslayouts=require('express-ejs-layouts')
 const mongoose=require('mongoose')
 const session=require('express-session')
 const Post = require('./models/post')
-const mongourl="mongodb+srv://christopherhendrata:admin@cluster0.6wwre.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const mongourl="mongodb+srv://<change-username-here>:<change-password-here>@<change-clustername-here>.mongodb.net/?retryWrites=true&w=majority&appName=<clustername>"
 const storage=multer.memoryStorage();
 const upload=multer({storage:storage});
 mongoose.connect(mongourl)
