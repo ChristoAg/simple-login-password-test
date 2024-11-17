@@ -1,0 +1,27 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead">Welcome, <%= user %></p>
+<a href="/posting" class="btn btn-info">Post</a>
+<a href="/users/login" class="btn btn-danger">Log Out</a>
+<div class="mt-4">
+    <h2>All Posts</h2>
+    <div class="row">
+        <% if (posts.length > 0) { %>
+            <% posts.forEach(post => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <% if (post.image) { %>
+                            <img src="data:<%= post.contentType %>;base64,<%= post.image.toString('base64') %>" 
+                                 alt="Post Image" class="card-img-top">
+                        <% } %>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= post.title %></h5>
+                            <p class="card-text"><%= post.description %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>No posts yet. Create one by clicking "Post" above!</p>
+        <% } %>
+    </div>
+</div>

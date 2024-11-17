@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-4 m-auto mt-5">
+        <div class="card card-body">
+            <!--Login text-->
+            <h1 class="text-center">Login</h1>
+            <!--Form-->
+            <form action="/users/login" method="POST">
+                <div class="form-group mt-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Example: yourname@spaceclub.com" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="At least 10 characters is recommended" required>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-primary" type="submit">Continue</button>
+                    <h5 class="text-center mt-5">Don't have an account?</h5>
+                    <a href="/users/register" class="btn btn-primary" type="submit">Register here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

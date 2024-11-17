@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-4 m-auto mt-5">
+        <div class="card card-body">
+            <!--Login text-->
+            <h1 class="text-center">Register</h1>
+            <!--Form-->
+            <%if (typeof message!="undefined") { %>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <%= message %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+            <% } %>
+            <form action="/users/register" method="POST">
+                <div class="form-group mt-3">
+                    <label for="name">Userame:</label>
+                    <input type="name" name="name" id="name" class="form-control" placeholder="Example: Abc123" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Example: yourname@spaceclub.com" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="At least 10 characters is recommended" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="password">Confirm Password:</label>
+                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Confirm your password here" required>
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button class="btn btn-primary" type="submit">Register</button>
+                    <h5 class="text-center mt-5">Already have an account?</h5>
+                    <a href="login" class="btn btn-primary" type="submit">Login instead</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
