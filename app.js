@@ -53,5 +53,5 @@ app.post("/posting",upload.single("image"),async(req,res)=>{
         res.status(500).send("Server error")
     }
 })
-const port=3000
+const port= <port-number>
 app.listen(port, console.log(`Listening to port: ${port}`))
